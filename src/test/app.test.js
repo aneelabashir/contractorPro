@@ -138,19 +138,19 @@ describe('POST /balances/deposit/:userId', () => {
   
       expect(response.status).toBe(200);
       expect(response.body).toEqual({ message: 'Deposit successful' });
-      // Add more assertions based on your expected response structure and balance updates
+     
     });
   
     // Test case for a client attempting to deposit more than 25% of their total jobs to pay
     test('returns 403 for exceeding deposit limit', async () => {
       const response = await request(app)
-        .post('/balances/deposit/9') // Use a valid client ID
-        .set('profile_id', '9') // Replace with a valid client profile ID
-        .send({ amount: 500 }); // Adjust the deposit amount to exceed the limit
+        .post('/balances/deposit/9') 
+        .set('profile_id', '9')
+        .send({ amount: 500 }); 
   
       expect(response.status).toBe(403);
       expect(response.body).toEqual({ message: 'Deposit limit reached' });
-      // Add more assertions based on your expected response structure
+
     });
   
     // Test case for a client with no jobs in progress or who has paid enough
