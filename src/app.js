@@ -246,7 +246,7 @@ app.get('/admin/best-profession', getProfile, async (req, res) => {
       return res.status(404).json({ message: 'No data available' });
     }
 
-    res.json(bestProfession[0]);
+    res.status(200).json(bestProfession[0]);
   } catch (error) {
       console.error('Error fetching best profession:', error);
       res.status(500).end();
@@ -305,7 +305,7 @@ app.get("/admin/best-clients", getProfile, async (req, res) => {
       return res.status(404).json({ message: "No data available" });
     }
 
-    res.json(bestClients);
+    res.status(200).json(bestClients);
   } catch (error) {
     console.error("Error fetching best clients:", error);
     res.status(500).end();

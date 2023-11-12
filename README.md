@@ -99,3 +99,16 @@ It would be great for example if you'd write some unit test / simple frontend de
 When you have finished the assignment, zip your repo (make sure to include .git folder) and send us the zip.
 
 Thank you and good luck! 🙏
+
+
+## improvements
+1- I will update the code structure separte directories for
+    => contoller
+    =>service
+    =>model
+2- I will implement logging for request and response on aws console.
+3- I will add better error handling error logging
+4- I will add req validation using joi for each api
+5- test cases can be improved by added mock data instead of reling on real time data.
+6-  use jwt tokens for request authentication
+7- will apply indexing on database table column for fast result

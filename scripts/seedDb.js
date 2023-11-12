@@ -266,6 +266,24 @@ async function seed() {
     price: 200,
     ContractId: 10,
   }),
-
+  Contract.create({
+    id: 11,
+    terms: 'bla bla bla',
+    status: 'in_progress',
+    ClientId: 4,
+    ContractorId: 7,
+  }),
+  Job.create({
+    description: 'work',
+    price: 1000, // Set a high price to ensure deposit success
+    paid: false,
+    ContractId:11,
+  }),
+  Job.create({
+    description: 'Work to pay',
+    price: 150,
+    paid: false,
+    ContractId: 10,
+  }),
   ]);
 }
